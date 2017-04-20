@@ -1,0 +1,44 @@
+---
+title: "Discussion 12 - Recommender Systems"
+author: "Georgia Galanopoulos"
+date: "April 20, 2017"
+output: html_document
+---
+
+### Spotify Discover Weekly
+
+Spotify is a music streaming service that has a feature called "Discover Weekly," where Spotify generates a playlist for each user each week based on their tastes.
+
+
+
+####**1. Scenario Design analysis**  Consider whether it makes sense for your selected recommender system to perform scenario design twice, once for the organization (e.g. Amazon.com) and once for the organization's customers.
+
+*a. Target users?*
+Individuals interested in listening to music. 
+
+*b. Their key goals?*
+To listen to the music they like, at an time, in any location.
+
+*c. How to help them accomplish said goals?*
+Providing users with free and legal music that is based on their tastes or habits.
+
+It doesn't seem valuable to perform a scenario design twice (for the organization) because Spotify's mission statement is clear about how it is primarily geared for its users.
+
+####**2. Reverse engineer attempt** (the interface and any available information found on the Internet or elsewhere).
+
+According to these websites: https://qz.com/571007/the-magic-that-makes-spotifys-discover-weekly-playlists-so-damn-good/ and  http://www.galvanize.com/blog/spotify-discover-weekly-data-science/, Spotify uses a whole slew of methods to make recommendations.
+
+
+_Collaborative Filtering_: using other users' information to recommend something. By finding users with similar taste, the algorithm can guess the likelihood of our target user liking the same music.
+
+_Convolutional Neural Network_: Identifying acoustic patterns in songs to determine if songs are similar to the ones the target user liked previously.
+
+_Natural Language Processing_: Treating playlists as paragraphs and songs as words to compare them to each other and find "words" with similar meanings, aka songs that are similar enough that the target user will like.
+
+_Outlier Detection_: The more the target user plays a particular type of music/artist, the more likely their work will be recommended. This ensures that songs played (for example) by someone whom the target user gave permission to the account once, will not pop up in the recommended list.
+
+
+####**3. Specific recommendations** How to improve the recommendation capabilities going forward.
+
+Personally, I am very picky with my music (or entertainment in general), so Spotify's recommendations have rarely worked for me (but when they did, they were exceptional). As such, I think maybe there should be a rating system for individuals like myself who either love a song or will never listen to it again. Because Spotify only has a limited number of "skips" (songs you can skip, I think you can only do three?) and skipping within about 30 seconds of a song counts as a "dislike" for the algorithm, there should be some other method to to tell the program that a song was listened to only because it couldn't be skipped and the user was tolerating it. Though, that in itself can be very annoying because not many users would be willing to rate every song they hear. 
+
